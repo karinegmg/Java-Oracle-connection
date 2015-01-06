@@ -7,6 +7,10 @@ import java.sql.Statement;
 
 import model.Client;
 
+/**
+ * @author mra2
+ *
+ */
 public class Engine {
 
 	static final String username = "g142if685cc_eq05";

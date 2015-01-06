@@ -16,6 +16,10 @@ import java.sql.SQLException;
 
 import javax.swing.JFormattedTextField;
 
+/**
+ * @author mra2
+ *
+ */
 public class InsertFrame {
 
 	private JFrame frame;
@@ -35,6 +39,7 @@ public class InsertFrame {
 		frame = new JFrame();
 		frame.setTitle("IF685 - Conectividade com JDBC ~> Insert");
 		frame.setBounds(100, 100, 600, 352);
+		frame.setLocationByPlatform(true);
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		frame.setVisible(true);
@@ -44,12 +49,12 @@ public class InsertFrame {
 		frame.getContentPane().add(name);
 		name.setColumns(15);
 
-		JLabel lblBuscarCliente = new JLabel("inastrar Cliente");
+		JLabel lblBuscarCliente = new JLabel("Insert Client");
 		lblBuscarCliente.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		lblBuscarCliente.setBounds(10, 11, 227, 14);
 		frame.getContentPane().add(lblBuscarCliente);
 
-		JLabel lblNome = new JLabel("Nome");
+		JLabel lblNome = new JLabel("Name");
 		lblNome.setBounds(10, 36, 46, 14);
 		frame.getContentPane().add(lblNome);
 
@@ -62,7 +67,7 @@ public class InsertFrame {
 		lblCpf.setBounds(10, 84, 46, 14);
 		frame.getContentPane().add(lblCpf);
 
-		JLabel lblTelefone = new JLabel("Telefone");
+		JLabel lblTelefone = new JLabel("Phone");
 		lblTelefone.setBounds(10, 132, 178, 14);
 		frame.getContentPane().add(lblTelefone);
 
@@ -70,7 +75,7 @@ public class InsertFrame {
 		clientTel1.setBounds(10, 157, 178, 20);
 		frame.getContentPane().add(clientTel1);
 
-		JButton clientBtnInsert = new JButton("inastar Cliente");
+		JButton clientBtnInsert = new JButton("Insert Client");
 		
 		clientBtnInsert.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

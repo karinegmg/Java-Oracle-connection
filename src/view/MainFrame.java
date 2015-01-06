@@ -10,6 +10,10 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
+/**
+ * @author mra2
+ *
+ */
 public class MainFrame extends JFrame {
 
 	private static final long serialVersionUID = 1L;
@@ -33,19 +37,22 @@ public class MainFrame extends JFrame {
 		@Override
 		public void actionPerformed(ActionEvent arg0) {
 			new InsertFrame();
-		}
-		
+		}	
 	}
 
 	public MainFrame() {
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 800, 600);
+		setBounds(0, 0, 250, 260);
+		setLocationRelativeTo(null);
 		panel = new JPanel();
 		panel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(panel);
 		panel.setLayout(null);
+		
+		//buttons
 		JButton searchBtnClient = new JButton("Search Client");
+		JButton insertBtnClient = new JButton("Insert Client");
 		
 		searchBtnClient.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -53,12 +60,11 @@ public class MainFrame extends JFrame {
 			}
 		});
 		
-		searchBtnClient.setBounds(265, 68, 236, 80);
+		searchBtnClient.setBounds(30, 10, 200, 100);
 		panel.add(searchBtnClient);
-		
-		JButton btnCadastrarCliente= new JButton("Insert Client");
-		btnCadastrarCliente.addActionListener(new ActionBtnInsert());
-		btnCadastrarCliente.setBounds(265, 218, 236, 80);
-		panel.add(btnCadastrarCliente);
+	
+		insertBtnClient.addActionListener(new ActionBtnInsert());
+		insertBtnClient.setBounds(30, 130, 200, 100);
+		panel.add(insertBtnClient);
 	}
 }

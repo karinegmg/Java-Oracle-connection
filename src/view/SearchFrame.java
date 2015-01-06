@@ -7,6 +7,10 @@ import javax.swing.JLabel;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
+/**
+ * @author mra2
+ *
+ */
 public class SearchFrame {
 
 	private JFrame frame;
@@ -16,7 +20,7 @@ public class SearchFrame {
 	public SearchFrame() {
 		
 		frame = new JFrame();
-		frame.setTitle("IF685 - Conectividade com JDBC ~> Query");
+		frame.setTitle("IF685 - Conectividade com JDBC ~> Search");
 		frame.setBounds(100, 100, 600, 400);
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.getContentPane().setLayout(null);

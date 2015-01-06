@@ -1,5 +1,9 @@
 package model;
 
+/**
+ * @author mra2
+ *
+ */
 public class Client {
 
 	private String CPF, nome;
