@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE AgenciaPropaganda[
+	<!ELEMENT ListaFornecedores (CNPJ, RAZAO_SOCIAL)>
+	<!ELEMENT CNPJ (#PCDATA)>
+	<!ELEMENT RAZAO_SOCIAL (#PCDATA)>
+]>
+
+<?xml-stylesheet type="text/css" href="customização.css"?>
+
+<AgenciaPropaganda>
+ <ListaFornecedores>
+
+<CNPJ>15266070716959</CNPJ>
+  <RAZAO_SOCIAL>2 Riscos</RAZAO_SOCIAL>
+
+</ListaFornecedores>
+ <ListaFornecedores>
+  <CNPJ>00511962674506</CNPJ>
+
+<RAZAO_SOCIAL>9 - The Creative Shop</RAZAO_SOCIAL>
+ </ListaFornecedores>
+
+<ListaFornecedores>
+  <CNPJ>54879875533463</CNPJ>
+  <RAZAO_SOCIAL>Active Media
+Solutions</RAZAO_SOCIAL>
+ </ListaFornecedores>
+ <ListaFornecedores>
+
+<CNPJ>89066057487277</CNPJ>
+  <RAZAO_SOCIAL>Activooh</RAZAO_SOCIAL>
+
+</ListaFornecedores>
+ <ListaFornecedores>
+  <CNPJ>45965545899212</CNPJ>
+
+<RAZAO_SOCIAL>Addiction - Brands Rehab</RAZAO_SOCIAL>
+
+</ListaFornecedores>
+</AgenciaPropaganda>

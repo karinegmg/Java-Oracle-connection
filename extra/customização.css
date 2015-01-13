@@ -1,0 +1,48 @@
+@media screen {
+
+	AgenciaPropaganda:before {
+		content: "Lista de Fornecedores";
+		font-size: 190%;
+	}
+
+	AgenciaPropaganda {
+		display: table;
+		color: darkblue;
+		font-weight: bold;
+		padding: 5%;
+		background-image: -webkit-linear-gradient(silver 200px, white 300px);		/*chrome*/
+		background-image: -moz-linear-gradient(silver 200px, white 300px);		/*firefox*/
+		background-image: -ms-linear-gradient(silver 200px, white 300px);		/*ie10+*/
+		background-image: -o-linear-gradient(silver 200px, white 300px);		/*opera*/
+		background-repeat: repeat-x;
+		background-color: white;
+		width: 90%;
+	}
+	
+	ListaFornecedores{
+		display: table-row;
+		background-color: white;
+	}
+	
+	CNPJ:before {
+		content: "CNPJ:: ";
+		color: black;
+	}
+	
+	CNPJ{
+		border: 1px solid gray;
+		display: table-cell;
+		width:230px;
+	}
+	
+	RAZAO_SOCIAL:before {
+		content: "Razão Social: ";
+		color: black;
+	}
+	
+	RAZAO_SOCIAL{
+		border: 1px solid gray;
+		display: table-cell;
+		width:230px;
+	}	
+}

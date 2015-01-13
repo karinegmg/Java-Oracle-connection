@@ -1,0 +1,15 @@
+set serveroutput on;
+declare
+ctx dbms_xmlgen.ctxhandle;
+resultado clob;
+
+begin
+	ctx := dbms_xmlgen.newContext('SELECT F.cnpj AS CNPJ, F.razao AS RAZAO_SOCIAL FROM tb_fornecedor F');
+	DBMS_XMLGEN.setRowsetTag(ctx, 'AgenciaPropaganda');
+	DBMS_XMLGEN.setRowTag(ctx,'ListaFornecedores');
+	resultado:=dbms_xmlgen.getXML(ctx);
+	dbms_output.put_line(resultado);
+	dbms_xmlgen.closeContext(ctx);
+end;
+/
+
