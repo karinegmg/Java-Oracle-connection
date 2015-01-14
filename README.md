@@ -18,9 +18,4 @@ Projeto para a cadeira de **Gerenciamento de Dados e Informação** [IF685](http
 #### Trabalhos produzidos
 
 Os trabalhos produzidos pelo grupo durante o desenvolvimento do projeto estão disponíveis [aqui](http://cin.ufpe.br/~mra2/gdi/downloads.html).
-
-
-#### Testes
-
-Testes Java/Swing feito a partir do [UISpec4J](https://github.com/UISpec4J/UISpec4J).
  

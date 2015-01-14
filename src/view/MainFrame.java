@@ -50,21 +50,21 @@ public class MainFrame extends JFrame {
 		setContentPane(panel);
 		panel.setLayout(null);
 		
-		//buttons
-		JButton searchBtnClient = new JButton("Search Client");
-		JButton insertBtnClient = new JButton("Insert Client");
+		//label -> inserir
+		JButton insertBtnClient = new JButton("Inserir Cliente");
+		insertBtnClient.addActionListener(new ActionBtnInsert());
+		insertBtnClient.setBounds(30, 10, 200, 100);
+		panel.add(insertBtnClient);
+		
+		//label -> search
+		JButton searchBtnClient = new JButton("Buscar Cliente");
+		searchBtnClient.setBounds(30, 110, 200, 100);
+		panel.add(searchBtnClient);
 		
 		searchBtnClient.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				new SearchFrame();
 			}
-		});
-		
-		searchBtnClient.setBounds(30, 10, 200, 100);
-		panel.add(searchBtnClient);
-	
-		insertBtnClient.addActionListener(new ActionBtnInsert());
-		insertBtnClient.setBounds(30, 130, 200, 100);
-		panel.add(insertBtnClient);
+		});	
 	}
 }

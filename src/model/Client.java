@@ -4,26 +4,38 @@ package model;
  * @author mra2
  *
  */
+
 public class Client {
 
-	private String CPF, nome;
-	private String[] telefones;
+	private String cpf, name, date, email;
+	private String[] phone;
 
-	public Client(String cPF, String nome, String[] telefones) {
-		CPF = cPF;
-		this.nome = nome;
-		this.telefones = telefones;
+	public Client(String cpf, String name, String date, String email,
+			String[] phone) {
+		this.cpf = cpf;
+		this.name = name;
+		this.date = date;
+		this.email = email;
+		this.phone = phone;
 	}
 
-	public String getCPF() {
-		return CPF;
+	public String getCpf() {
+		return cpf;
 	}
 
-	public String getNome() {
-		return nome;
+	public String getName() {
+		return name;
 	}
 
-	public String[] getTelefones() {
-		return telefones;
+	public String getDate() {
+		return date;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public String[] getPhone() {
+		return phone;
 	}
 }
