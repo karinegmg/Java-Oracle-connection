@@ -18,13 +18,14 @@ public class Engine {
 
 	static final String server = "jdbc:oracle:thin:hr/hr@localhost:";
 	static final String port = "1521";
-	static final String service = "XE";
+	static final String service = "/XE";
 	static final String URL = server + port + service;
 
 	static final String username = "g142if685cc_eq05";
 	static final String password = "gaikyaktup7";
 
-	public static Connection connectToDatabase(String username, String password) {
+	public static Connection connectToDatabase(String username, String password)
+			throws ClassNotFoundException {
 
 		Connection con = null;
 
@@ -42,19 +43,29 @@ public class Engine {
 
 	public void Insert(Client c) throws SQLException, ClassNotFoundException {
 
-		// Ex: INSERT INTO tb_cliente VALUES(tp_cliente('" + c.getCpf() + "', '"
-		// + c.getName() + "', '" + c.getDate() +
-		// "', EMPTY_BLOB(), tp_contato('" + c.getEmail() + "',
-		// tp_va_telefones(tp_telefone('81', '68011620'))),(SELECT REF(e) FROM
-		// tb_endereco e WHERE e.id_endereco = 3), (SELECT REF(f) FROM
-		// tb_funcionario f WHERE f.cpf ='510.362.857-78')));
+		/*
+		 * base = INSERT INTO tb_cliente VALUES(tp_cliente('785.895.165-47', 'Jair
+		 * Bolsonaro', '12/12/1970', EMPTY_BLOB(),
+		 * tp_contato('jairbolsonaro@email.com',
+		 * tp_va_telefones(tp_telefone('81', '68011620'))),(SELECT REF(e) FROM
+		 * tb_endereco e WHERE e.id_endereco = 3), (SELECT REF(f) FROM
+		 * tb_funcionario f WHERE f.cpf ='510.362.857-78')));
+		 * 
+		 * 
+		 * convetido = INSERT INTO tb_cliente VALUES(tp_cliente('" +
+		 * c.getCpf() + "', '" + // c.getName() + "', '" + c.getDate() +
+		 * "', EMPTY_BLOB(), tp_contato('" // + c.getEmail() + "',
+		 * tp_va_telefones(tp_telefone('81', // '68011620'))),(SELECT REF(e)
+		 * FROM tb_endereco e WHERE e.id_endereco = // 3), (SELECT REF(f) FROM
+		 * tb_funcionario f WHERE f.cpf // ='510.362.857-78')));
+		 */
 
-		int count = 0;
+		int count_id = 30;
 		Connection con = connectToDatabase(username, password);
 		Statement stmt = con.createStatement();
 
-		String[] telefones = c.getPhone();
-		String t = telefones[count++];
+		int ID = count_id++;
+		String cpf_Func = "510.362.857-78";
 
 		String i = "INSERT INTO tb_cliente VALUES(tp_cliente('"
 				+ c.getCpf()
@@ -64,7 +75,11 @@ public class Engine {
 				+ c.getDate()
 				+ "', EMPTY_BLOB(), tp_contato('"
 				+ c.getEmail()
-				+ "', tp_va_telefones(tp_telefone('81', '68011620'))),(SELECT REF(e) FROM tb_endereco e WHERE e.id_endereco = 3), (SELECT REF(f) FROM tb_funcionario f WHERE f.cpf ='510.362.857-78')));";
+				+ "',  tp_va_telefones(tp_telefone('81', '"
+				+ c.getPhone()
+				+ "'))),(SELECT REF(e) FROM tb_endereco e WHERE e.id_endereco = "
+				+ ID + "), (SELECT REF(f) FROM tb_funcionario f WHERE f.cpf ='"
+				+ cpf_Func + " ')));";
 
 		stmt.executeQuery(i);
 		stmt.close();

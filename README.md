@@ -11,7 +11,7 @@ Projeto para a cadeira de **Gerenciamento de Dados e Informação** [IF685](http
 
 * [Alexandre Ferreira](https://github.com/afc2) - afc2@cin.ufpe.br
 * [Franclin Cabral](https://github.com/FranclinC) - fcmo@cin.ufpe.br
-* [Miguel Rodrigues](https://github.com/miguelarauj1o) - mra2@cin.ufpe.br (Líder)
+* [Miguel Rodrigues](https://github.com/miguelarauj1o) - mra2@cin.ufpe.br
 * Rodrigo de Melo - rms10@cin.ufpe.br
 * Yago Nobre - yns@cin.ufpe.br
 
