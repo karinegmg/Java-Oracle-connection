@@ -15,11 +15,9 @@ import model.Client;
 public class Engine {
 
 	static final String driver = "oracle.jdbc.driver.OracleDriver";
-
-	static final String server = "jdbc:oracle:thin:hr/hr@localhost:";
-	static final String port = "1521";
-	static final String service = "/XE";
-	static final String URL = server + port + service;
+	
+	//example = jdbc:oracle:driver_type:[username/password]@database_specifier
+	static final String URL = "jdbc:oracle:thin:hr/hr@localhost:1521/XE";
 
 	static final String username = "g142if685cc_eq05";
 	static final String password = "gaikyaktup7";

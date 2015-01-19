@@ -8,7 +8,7 @@ import view.MainFrame;
  */
 public class MainApp {
 	
-	//up new Main Window
+	//up new MainFrame
 	MainApp(){
 		new MainFrame();
 	}
