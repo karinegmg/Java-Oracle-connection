@@ -19,8 +19,8 @@ public class Engine {
 	//example = jdbc:oracle:driver_type:[username/password]@database_specifier
 	static final String URL = "jdbc:oracle:thin:hr/hr@localhost:1521/XE";
 
-	static final String username = "g142if685cc_eq05";
-	static final String password = "gaikyaktup7";
+	static final String username = "system";
+	static final String password = ""; //local password
 
 	public static Connection connectToDatabase(String username, String password)
 			throws ClassNotFoundException {
@@ -42,7 +42,7 @@ public class Engine {
 	public void Insert(Client c) throws SQLException, ClassNotFoundException {
 
 		/*
-		 * base = INSERT INTO tb_cliente VALUES(tp_cliente('785.895.165-47', 'Jair
+		 * INSERT INTO tb_cliente VALUES(tp_cliente('785.895.165-47', 'Jair
 		 * Bolsonaro', '12/12/1970', EMPTY_BLOB(),
 		 * tp_contato('jairbolsonaro@email.com',
 		 * tp_va_telefones(tp_telefone('81', '68011620'))),(SELECT REF(e) FROM
@@ -50,7 +50,7 @@ public class Engine {
 		 * tb_funcionario f WHERE f.cpf ='510.362.857-78')));
 		 * 
 		 * 
-		 * convetido = INSERT INTO tb_cliente VALUES(tp_cliente('" +
+		 * INSERT INTO tb_cliente VALUES(tp_cliente('" +
 		 * c.getCpf() + "', '" + // c.getName() + "', '" + c.getDate() +
 		 * "', EMPTY_BLOB(), tp_contato('" // + c.getEmail() + "',
 		 * tp_va_telefones(tp_telefone('81', // '68011620'))),(SELECT REF(e)

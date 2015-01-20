@@ -6,6 +6,7 @@ import view.MainFrame;
  * @author mra2
  *
  */
+
 public class MainApp {
 	
 	//up new MainFrame
