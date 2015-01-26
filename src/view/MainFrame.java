@@ -1,14 +1,13 @@
 package view;
 
 import java.awt.EventQueue;
-import view.InsertFrame;
-import view.SearchFrame;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import javax.swing.JButton;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 
 /**
  * @author mra2
@@ -16,11 +15,18 @@ import java.awt.event.ActionEvent;
  */
 public class MainFrame extends JFrame {
 
+	static class ActionBtnInsert implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent arg0) {
+			new InsertFrame();
+		}	
+	}
 	private static final long serialVersionUID = 1L;
-	private JPanel panel;
 	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
+			@Override
 			public void run() {
 				try {
 					MainFrame frame = new MainFrame();
@@ -32,13 +38,7 @@ public class MainFrame extends JFrame {
 		});
 	}
 	
-	static class ActionBtnInsert implements ActionListener{
-
-		@Override
-		public void actionPerformed(ActionEvent arg0) {
-			new InsertFrame();
-		}	
-	}
+	private JPanel panel;
 
 	public MainFrame() {
 		
@@ -62,6 +62,7 @@ public class MainFrame extends JFrame {
 		panel.add(searchBtnClient);
 		
 		searchBtnClient.addActionListener(new ActionListener() {
+			@Override
 			public void actionPerformed(ActionEvent e) {
 				new SearchFrame();
 			}

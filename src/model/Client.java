@@ -23,16 +23,16 @@ public class Client {
 		return cpf;
 	}
 
-	public String getName() {
-		return name;
-	}
-
 	public String getDate() {
 		return date;
 	}
 
 	public String getEmail() {
 		return email;
+	}
+
+	public String getName() {
+		return name;
 	}
 
 	public String[] getPhone() {

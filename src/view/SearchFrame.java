@@ -1,11 +1,13 @@
 package view;
 
-import javax.swing.JFrame;
-import javax.swing.JTextField;
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.WindowConstants;
 
 /**
  * @author mra2
@@ -13,16 +15,16 @@ import java.awt.event.ActionEvent;
  */
 public class SearchFrame {
 
+	private JTextField cpf;
 	private JFrame frame;
 	private JTextField name;
-	private JTextField cpf;
 
 	public SearchFrame() {
 		
 		frame = new JFrame();
 		frame.setTitle("Conectividade com JDBC");
 		frame.setBounds(100, 100, 400, 200);
-		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		frame.setVisible(true);
 		
@@ -50,6 +52,7 @@ public class SearchFrame {
 		
 		JButton bucar = new JButton("Buscar Cliente");
 		bucar.addActionListener(new ActionListener() {
+			@Override
 			public void actionPerformed(ActionEvent arg0) {
 			}
 		});

@@ -16,11 +16,11 @@ public class Engine {
 
 	static final String driver = "oracle.jdbc.driver.OracleDriver";
 	
+	static final String password = ""; //local password
+
 	//example = jdbc:oracle:driver_type:[username/password]@database_specifier
 	static final String URL = "jdbc:oracle:thin:hr/hr@localhost:1521/XE";
-
 	static final String username = "system";
-	static final String password = ""; //local password
 
 	public static Connection connectToDatabase(String username, String password)
 			throws ClassNotFoundException {

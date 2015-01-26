@@ -1,18 +1,18 @@
 package view;
 
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
-import model.Client;
-import controller.Engine;
+import java.sql.SQLException;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+import javax.swing.WindowConstants;
 
-import java.awt.Font;
-import java.sql.SQLException;
+import model.Client;
+import controller.Engine;
 
 /**
  * @author mra2
@@ -20,17 +20,13 @@ import java.sql.SQLException;
  */
 public class InsertFrame {
 
-	private JFrame frame;
-	private JTextField name, cpf, date, phone1, phone2, phone3, email;
 	private static Engine in;
-
 	static {
 		in = new Engine();
 	}
+	private JFrame frame;
 
-	public void setVisible(boolean v) {
-		this.frame.setVisible(v);
-	}
+	private JTextField name, cpf, date, phone1, phone2, phone3, email;
 
 	public InsertFrame() {
 
@@ -38,7 +34,7 @@ public class InsertFrame {
 		frame.setTitle("Conectividade com JDBC");
 		frame.setBounds(100, 100, 300, 352);
 		frame.setLocationByPlatform(true);
-		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		frame.setVisible(true);
 
@@ -99,6 +95,7 @@ public class InsertFrame {
 		JButton clientBtnInsert = new JButton("Inserir Cliente");
 
 		clientBtnInsert.addActionListener(new ActionListener() {
+			@Override
 			public void actionPerformed(ActionEvent e) {
 				String[] telefones = new String[3];
 
@@ -122,5 +119,9 @@ public class InsertFrame {
 
 		clientBtnInsert.setBounds(10, 268, 178, 23);
 		frame.getContentPane().add(clientBtnInsert);
+	}
+
+	public void setVisible(boolean v) {
+		this.frame.setVisible(v);
 	}
 }
