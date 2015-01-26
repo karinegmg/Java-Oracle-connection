@@ -43,6 +43,7 @@ public class InsertFrame {
 		lblBuscarCliente.setBounds(10, 10, 227, 14);
 		frame.getContentPane().add(lblBuscarCliente);
 
+		/*--------------------LABEL SECTION--------------------*/
 		// label -> name
 		name = new JTextField();
 		name.setText("Nome");
@@ -91,6 +92,7 @@ public class InsertFrame {
 		phone3.setColumns(15);
 		phone3.setBounds(10, 230, 178, 20);
 		frame.getContentPane().add(phone3);
+		/*--------------------END SECTION--------------------*/
 
 		JButton clientBtnInsert = new JButton("Inserir Cliente");
 

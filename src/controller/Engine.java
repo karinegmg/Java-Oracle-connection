@@ -15,12 +15,9 @@ import model.Client;
 public class Engine {
 
 	static final String driver = "oracle.jdbc.driver.OracleDriver";
-	
-	static final String password = ""; //local password
-
-	//example = jdbc:oracle:driver_type:[username/password]@database_specifier
 	static final String URL = "jdbc:oracle:thin:hr/hr@localhost:1521/XE";
 	static final String username = "system";
+	static final String password = ""; // local password
 
 	public static Connection connectToDatabase(String username, String password)
 			throws ClassNotFoundException {
@@ -40,23 +37,6 @@ public class Engine {
 	}
 
 	public void Insert(Client c) throws SQLException, ClassNotFoundException {
-
-		/*
-		 * INSERT INTO tb_cliente VALUES(tp_cliente('785.895.165-47', 'Jair
-		 * Bolsonaro', '12/12/1970', EMPTY_BLOB(),
-		 * tp_contato('jairbolsonaro@email.com',
-		 * tp_va_telefones(tp_telefone('81', '68011620'))),(SELECT REF(e) FROM
-		 * tb_endereco e WHERE e.id_endereco = 3), (SELECT REF(f) FROM
-		 * tb_funcionario f WHERE f.cpf ='510.362.857-78')));
-		 * 
-		 * 
-		 * INSERT INTO tb_cliente VALUES(tp_cliente('" +
-		 * c.getCpf() + "', '" + // c.getName() + "', '" + c.getDate() +
-		 * "', EMPTY_BLOB(), tp_contato('" // + c.getEmail() + "',
-		 * tp_va_telefones(tp_telefone('81', // '68011620'))),(SELECT REF(e)
-		 * FROM tb_endereco e WHERE e.id_endereco = // 3), (SELECT REF(f) FROM
-		 * tb_funcionario f WHERE f.cpf // ='510.362.857-78')));
-		 */
 
 		int count_id = 30;
 		Connection con = connectToDatabase(username, password);

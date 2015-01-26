@@ -5,6 +5,6 @@ Application that allows entering and accessing multimedia data in Oracle databas
 
 ----
 
-__docs__ folder have all files produced during the project development. 
-In the __lib__ folder you can find the jdbc driver.
-Lastly, __extra__ folder have the xmltype (_not directly related with project_). 
++ __docs folder__ have all files produced during the project development. 
++ __lib folder__ you can find the jdbc driver.
++ __extra folder__ have the xmltype (_not directly related with project_). 
